@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --sigma-void: #070913;
+    --sigma-cyan: #00f0ff;
+    --sigma-yellow: #ffd600;
+    --sigma-magenta: #ff007a;
+    --sigma-purple: #a78bfa;
+    --sigma-emerald: #10b981;
+  }
+
+  body {
+    background-color: #070913;
+    color: #f1f5f9;
+    font-family: 'Outfit', 'Lexend', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Unbounded', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism containers */
+.glass {
+  background: rgba(11, 15, 33, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.glass-subtle {
+  background: rgba(17, 24, 52, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Interactive Buttons */
+.btn-sigma {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.875rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  background-color: #00f0ff;
+  color: #050814;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-sigma:hover {
+  background-color: #38f8ff;
+  box-shadow: 0 0 32px rgba(0, 240, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-sigma:active {
+  transform: translateY(1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Form Fields */
+.field {
+  width: 100%;
+  border-radius: 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(5, 8, 20, 0.65);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #f8fafc;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.field:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+}
+
+.field::placeholder {
+  color: #64748b;
+}
+
+.overline-label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* Sigma Brand Colors */
+.bg-sigma-void { background-color: #070913; }
+.bg-sigma-cyan { background-color: #00f0ff; }
+.text-sigma-cyan { color: #00f0ff; }
+.border-sigma-cyan { border-color: #00f0ff; }
+.bg-sigma-yellow { background-color: #ffd600; }
+.text-sigma-yellow { color: #ffd600; }
+.border-sigma-yellow { border-color: #ffd600; }
+.text-sigma-void { color: #070913; }
